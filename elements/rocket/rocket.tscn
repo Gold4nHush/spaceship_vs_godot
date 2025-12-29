@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxrne1f2uj17b"]
+
+[ext_resource type="Script" uid="uid://dl182xdyalrt7" path="res://elements/rocket/rocket.gd" id="1_1qhbu"]
+[ext_resource type="Texture2D" uid="uid://cvnftmaylt82l" path="res://assets/rocket.png" id="1_6w7uj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnu6c"]
+atlas = ExtResource("1_6w7uj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdm10"]
+atlas = ExtResource("1_6w7uj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdcsp"]
+atlas = ExtResource("1_6w7uj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fko7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnu6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdm10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdcsp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n7mcx"]
+radius = 3.0
+height = 14.0
+
+[node name="Rocket" type="CharacterBody2D"]
+top_level = true
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_1qhbu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fko7a")
+autoplay = "default"
+frame_progress = 0.802999
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_n7mcx")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, 3)
+scale = Vector2(0.3, 0.9)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

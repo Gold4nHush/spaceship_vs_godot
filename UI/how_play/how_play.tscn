@@ -1,0 +1,157 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv5f2sdjotna1"]
+
+[ext_resource type="Script" uid="uid://d2dvfglec8ht3" path="res://UI/how_play/how_play.gd" id="1_ofnfl"]
+[ext_resource type="Texture2D" uid="uid://jpv0oml65ash" path="res://assets/Space_Stars2.png" id="1_ukpg1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ofnfl"]
+texture = ExtResource("1_ukpg1")
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bv7ub"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.20392157)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukpg1"]
+bg_color = Color(0.11372549, 0.14117648, 0.18431373, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="how_play" type="CanvasLayer"]
+script = ExtResource("1_ofnfl")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ofnfl")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -73.0
+offset_right = 78.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "HOW TO PLAY?"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "  Shoot              Move"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 187.0
+offset_top = 102.0
+offset_right = 227.0
+offset_bottom = 142.0
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48700002
+anchor_top = 0.5
+anchor_right = 0.48700002
+anchor_bottom = 0.5
+offset_left = -19.480001
+offset_top = -33.0
+offset_right = 19.519999
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "→"
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 143.0
+offset_top = 102.0
+offset_right = 183.0
+offset_bottom = 142.0
+
+[node name="Label" type="Label" parent="ColorRect3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.52500004
+anchor_top = 0.5
+anchor_right = 0.52500004
+anchor_bottom = 0.5
+offset_left = -20.000002
+offset_top = -33.0
+offset_right = 19.999998
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "←"
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 32.0
+offset_top = 102.0
+offset_right = 132.0
+offset_bottom = 142.0
+
+[node name="Label" type="Label" parent="ColorRect4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -17.5
+offset_right = 35.5
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Space"
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -80.0
+offset_right = 48.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_bv7ub")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ukpg1")
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]

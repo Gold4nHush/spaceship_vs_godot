@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmabio6r1oqi8"]
+
+[ext_resource type="Shader" uid="uid://drubkpgsiiguc" path="res://UI/main_menu/crt_shader.gdshader" id="1_8w0jg"]
+[ext_resource type="Script" uid="uid://svx5vxc5n1g0" path="res://effects/CRTLayer.gd" id="1_cmauj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cmauj"]
+shader = ExtResource("1_8w0jg")
+shader_parameter/enabled = true
+shader_parameter/scanline_count = 0.0
+shader_parameter/scanline_opacity = 0.4
+shader_parameter/warp_amount = 0.5510000261725
+shader_parameter/vignette_opacity = 0.5
+shader_parameter/aberration_amount = 0.5
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_cmauj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_cmauj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

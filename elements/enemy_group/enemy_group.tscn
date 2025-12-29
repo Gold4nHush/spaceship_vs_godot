@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://csg0iqgmuuetm"]
+
+[ext_resource type="Script" uid="uid://bsw5snyhekpy7" path="res://elements/enemy_group/enemy_group.gd" id="1_tacc3"]
+[ext_resource type="PackedScene" uid="uid://wv2jkr70h1px" path="res://elements/enemy/enemy.tscn" id="2_0pnug"]
+
+[node name="EnemyGroup" type="Node2D" groups=["enemy_group"]]
+script = ExtResource("1_tacc3")
+
+[node name="Enemy" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(30, 27)
+
+[node name="Enemy2" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(60, 27)
+
+[node name="Enemy3" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(90, 27)
+
+[node name="Enemy6" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(120, 27)
+
+[node name="Enemy7" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(150, 27)
+
+[node name="Enemy8" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(180, 27)
+
+[node name="Enemy4" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(46, 52)
+
+[node name="Enemy5" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(76, 52)
+
+[node name="Enemy9" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(106, 52)
+
+[node name="Enemy10" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(136, 52)
+
+[node name="Enemy11" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(166, 52)
+
+[node name="Enemy12" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(196, 52)
+
+[node name="Enemy13" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(32, 77)
+
+[node name="Enemy14" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(62, 77)
+
+[node name="Enemy15" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(92, 77)
+
+[node name="Enemy16" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(122, 77)
+
+[node name="Enemy17" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(152, 77)
+
+[node name="Enemy18" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(182, 77)
+
+[node name="Enemy19" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(47, 100)
+
+[node name="Enemy20" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(77, 100)
+
+[node name="Enemy21" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(107, 100)
+
+[node name="Enemy22" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(137, 100)
+
+[node name="Enemy23" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(167, 100)
+
+[node name="Enemy24" parent="." instance=ExtResource("2_0pnug")]
+position = Vector2(197, 100)
+
+[node name="BlockTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="ShotTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="ShotTimer" to="." method="_on_shot_timer_timeout"]

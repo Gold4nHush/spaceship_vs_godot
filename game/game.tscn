@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://bsyfe7mhgh47h"]
+
+[ext_resource type="Script" uid="uid://d2egu27144ml8" path="res://game/game.gd" id="1_dakft"]
+[ext_resource type="Texture2D" uid="uid://jpv0oml65ash" path="res://assets/Space_Stars2.png" id="1_ok7b0"]
+[ext_resource type="PackedScene" uid="uid://c0th20u72sx01" path="res://elements/space_ship/character_body_2d.tscn" id="2_b4peq"]
+[ext_resource type="PackedScene" uid="uid://ib3lf4kve8ia" path="res://elements/wall/wall.tscn" id="3_dqgt3"]
+[ext_resource type="PackedScene" uid="uid://csg0iqgmuuetm" path="res://elements/enemy_group/enemy_group.tscn" id="4_x56st"]
+[ext_resource type="PackedScene" uid="uid://bvwcgc4f1kx6" path="res://UI/hud/hud.tscn" id="5_dxrkv"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_dakft")
+
+[node name="Backround" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(128, 120)
+texture = ExtResource("1_ok7b0")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 240)
+
+[node name="SpaceShip" parent="." instance=ExtResource("2_b4peq")]
+position = Vector2(125, 216)
+
+[node name="Wall" parent="." instance=ExtResource("3_dqgt3")]
+
+[node name="Wall2" parent="." instance=ExtResource("3_dqgt3")]
+position = Vector2(256, 0)
+
+[node name="EnemyGroup" parent="." instance=ExtResource("4_x56st")]
+position = Vector2(4, 23)
+
+[node name="HUD" parent="." instance=ExtResource("5_dxrkv")]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvuy821ge6sqx"
+path="res://.godot/imported/eona-emotional-ambient-pop-351436 short1.mp3-a04777335e5a2959043e4d3b49ce7193.mp3str"
+
+[deps]
+
+source_file="res://music/eona-emotional-ambient-pop-351436 short1.mp3"
+dest_files=["res://.godot/imported/eona-emotional-ambient-pop-351436 short1.mp3-a04777335e5a2959043e4d3b49ce7193.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=2.0
+bpm=0.0
+beat_count=0
+bar_beats=4

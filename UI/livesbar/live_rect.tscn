@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccj2qa7i8h08s"]
+
+[ext_resource type="Texture2D" uid="uid://ca82to7du2m2w" path="res://assets/space_ship.png" id="1_gtqqu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dakft"]
+atlas = ExtResource("1_gtqqu")
+region = Rect2(9, 11, 30, 26)
+
+[node name="LiveRect" type="TextureRect"]
+custom_minimum_size = Vector2(16, 16)
+texture = SubResource("AtlasTexture_dakft")
+expand_mode = 1
+stretch_mode = 5
