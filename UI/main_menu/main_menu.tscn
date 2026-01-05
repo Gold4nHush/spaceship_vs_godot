@@ -1,11 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://rplhp053jpy3"]
+[gd_scene load_steps=10 format=3 uid="uid://rplhp053jpy3"]
 
 [ext_resource type="Script" uid="uid://biumia864uwdt" path="res://UI/main_menu/main_menu.gd" id="1_bxyur"]
 [ext_resource type="Texture2D" uid="uid://jpv0oml65ash" path="res://assets/Space_Stars2.png" id="2_osatk"]
 [ext_resource type="Texture2D" uid="uid://de6vuh32jcfpx" path="res://icons/music_on.png" id="3_qtoa1"]
 [ext_resource type="Script" uid="uid://ijqjgii1siqu" path="res://UI/main_menu/music_button.gd" id="4_usm5j"]
-[ext_resource type="Texture2D" uid="uid://6rclknpj5lhg" path="res://icons/CRT_on.png" id="5_lib8g"]
-[ext_resource type="Script" uid="uid://bsrdly74nklm2" path="res://UI/main_menu/crt_button.gd" id="6_rxajg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1xao8"]
 texture = ExtResource("2_osatk")
@@ -141,17 +139,6 @@ scale = Vector2(1.2, 1.2)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_qtoa1")
 script = ExtResource("4_usm5j")
-
-[node name="CRTButton" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 213.99998
-offset_top = 2.0
-offset_right = 229.99998
-offset_bottom = 18.0
-scale = Vector2(1.2000002, 1.2000002)
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("5_lib8g")
-script = ExtResource("6_rxajg")
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

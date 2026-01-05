@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Spaceship vs Godot"
+config/name="SPACESHIP VS ALIENS"
 run/main_scene="uid://rplhp053jpy3"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://ca82to7du2m2w"
 
 [autoload]
 
